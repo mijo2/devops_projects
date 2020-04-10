@@ -1,8 +1,10 @@
-def gitUrl = 'git://github.com/mijo2/devops_projects/tree/week-1'
+def gitUrl = 'git://github.com/mijo2/devops_projects/'
 
 job('test-job') {
     scm {
         git(gitUrl)
+        credentialsId("GitHub")
+        branches("week-1")
     }
     triggers {
         scm('02 15 * * *')

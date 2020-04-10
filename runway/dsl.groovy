@@ -1,4 +1,4 @@
-def gitUrl = 'git://github.com/mijo2/devops_projects/'
+def gitUrl = 'https://github.com/mijo2/devops_projects/'
 
 job('test-job') {
     scm {

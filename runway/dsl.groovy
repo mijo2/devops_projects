@@ -15,6 +15,6 @@ job('test-job') {
         scm('24 15 * * *')
     }
     steps {
-        maven('-e clean install')
+        sh "mvn -f week1_work/pom.xml -e clean install"
     }
 }

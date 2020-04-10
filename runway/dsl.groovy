@@ -15,7 +15,7 @@ job('test-job') {
     }
     steps {
         dir('week1_work'){
-            sh "$PWD"
+            sh "pwd"
         }
         maven('-e clean install')
     }

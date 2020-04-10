@@ -78,10 +78,10 @@
                 <directory>${basedir}\target</directory>
                 <includes>
                   <include>**/*.bin</include>
-                </includes>
-              </fileset>
-            </filesets>
-          </configuration>
+                  </includes>
+                </fileset>
+              </filesets>
+            </configuration>
           </plugin>
       </plugins>
     </pluginManagement>

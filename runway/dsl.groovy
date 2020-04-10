@@ -14,8 +14,9 @@ job('test-job') {
         scm('* * * * *')
     }
     steps {
-        shell("cd week1_work")
-        shell("pwd")
+        dir('week1_work'){
+            sh "$PWD"
+        }
         maven('-e clean install')
     }
 }

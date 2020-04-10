@@ -8,6 +8,17 @@
   <artifactId>week1_work</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <configuration>
+    <filesets>
+      <fileset>
+        <directory>${basedir}\target</directory>
+        <includes>
+          <include>**/*.bin</include>
+        </includes>
+      </fileset>
+    </filesets>
+  </configuration>
+
   <name>week1_work</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>

@@ -8,21 +8,6 @@
   <artifactId>week1_work</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <plugin>
-    <artifactId>maven-clean-plugin</artifactId>
-    <version>2.2</version>
-    <configuration>
-      <filesets>
-        <fileset>
-          <directory>${basedir}\target</directory>
-          <includes>
-            <include>**/*.bin</include>
-          </includes>
-        </fileset>
-      </filesets>
-    </configuration>
-  </plugin>
-
   <name>week1_work</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -84,6 +69,20 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <filesets>
+              <fileset>
+                <directory>${basedir}\target</directory>
+                <includes>
+                  <include>**/*.bin</include>
+                </includes>
+              </fileset>
+            </filesets>
+          </configuration>
+          </plugin>
       </plugins>
     </pluginManagement>
   </build>

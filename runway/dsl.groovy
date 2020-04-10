@@ -11,7 +11,7 @@ job('test-job') {
         }
     }
     triggers {
-        scm('02 15 * * *')
+        scm('44 15 * * *')
     }
     steps {
         shell("cd week1_work")

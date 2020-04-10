@@ -12,9 +12,12 @@ job('test-job') {
         }
     }
     triggers {
-        scm('24 15 * * *')
+        scm('* * * * *')
     }
     steps {
-        maven('-e clean install')
+        maven{
+            goals("-e clean install")
+            mavenInstallation("maven 3.6.3")
+        }
     }
 }

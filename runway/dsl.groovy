@@ -5,7 +5,7 @@ job('test-job') {
         git(gitUrl)
     }
     triggers {
-        scm('50 14 * * *')
+        scm('02 15 * * *')
     }
     steps {
         shell("cd week1_work")

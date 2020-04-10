@@ -12,7 +12,7 @@ job('test-job') {
         }
     }
     triggers {
-        scm('* * * * *')
+        scm('0 10 * * *')
     }
     steps {
         maven{

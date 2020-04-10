@@ -14,7 +14,9 @@ job('test-job') {
         scm('* * * * *')
     }
     steps {
-        dir("week1_work")
+        dir("/var/jenkins_home/workspace/test-job/week1_work"){
+            sh "pwd"
+        }
         maven('-e clean install')
     }
 }

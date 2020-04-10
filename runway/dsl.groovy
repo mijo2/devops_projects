@@ -11,10 +11,11 @@ job('test-job') {
         }
     }
     triggers {
-        scm('47 15 * * *')
+        scm('* * * * *')
     }
     steps {
         shell("cd week1_work")
+        shell("pwd")
         maven('-e clean install')
     }
 }

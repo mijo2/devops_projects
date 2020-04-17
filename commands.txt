@@ -1,0 +1,14 @@
+shell script: mongo localhost:27000
+
+mongodb shell:
+
+cfg = {
+   '_id':'repSetTest',
+  'members':[
+       {'_id':0, 'host': 'localhost:27000'},
+       {'_id':1, 'host': 'localhost:27001'},
+       {'_id':2, 'host': 'localhost:27002'}
+   ]
+}
+
+rs.initiate(cfg)

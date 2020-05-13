@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <script src="responsive.js"></script>
+    
+    <title> Another responsive website - 2020</title>
+</head>
+
+<body>
+    <div id="div">
+    <h1> The text below is responsive... </h1>
+    </div>
+
+    <script>
+        var tag = document.createElement("h1");
+        var text = document.createTextNode("Responsive stuff");
+        var div = document.getElementById("div");
+
+        tag.appendChild(text);
+        tag.id = getID();
+        div.appendChild(tag);
+    </script>
+
+</body>

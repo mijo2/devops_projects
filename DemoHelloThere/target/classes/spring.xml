@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="mobile" class="com.assign6.DemoHelloThere.Mobile" autowire="byName">
+	<property name="price" value="12"></property>
+</bean>
+
+<bean id="camera" class="com.assign6.DemoHelloThere.Camera">
+	<property name="mg_pixels" value="12000"></property> 
+</bean>
+
+<bean id="screen" class="com.assign6.DemoHelloThere.Screen">
+	<property name="len_" value="10"></property>
+	<property name="bre" value="10"></property>
+</bean>
+
+<bean id="speaker" class="com.assign6.DemoHelloThere.Speaker">
+	<property name="vol_level" value="14"></property>
+	<property name="speaker_type" value="Type 4.5"></property>
+</bean>
+
+</beans>

@@ -16,4 +16,4 @@ Merging Pull Request using GitHub GUI done [here](https://github.com/mijo2/GitPr
 
 ## Part C
 
-Part C's work was done in `practice_branch`.
+Part C's work was done in `practice_branch` and the results of rebasing is shown in `practice_branch_after_rebase` branch.

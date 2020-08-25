@@ -1,0 +1,9 @@
+Add n units to the Date, Unit : days, n : 12, Date : 12/11/1997
+Add n units to the Date, Unit : days, n : 12, Date : 12/11/1997
+Add n units to the Date, Unit : months, n : 2, Date : 15/4/1997
+Add/Substract, Date 1 : 12/11/1997, Date 2 : 01/01/0001, Operation : +
+Add n units to the Date, Unit : weeks, n : 2, Date : 12/11/1997
+Day of the week, Date : 12/11/1997
+Week number, Date : 12/11/1997
+Language Phrase conversion, Phrase:  : 5 days from now
+Add/Substract, Date 1 : 12/11/1997, Date 2 : 01/01/0001, Operation : +

@@ -86,7 +86,7 @@ public class AddDates {
 		int n1 = Integer.parseInt(n);
 		Date d = format.parse(date);
 		
-		Calendar c1 = Calendar.getInstance(), clone = Calendar.getInstance();
+		Calendar c1 = Calendar.getInstance();
 		c1.setTime(d);
 		
 		int field = -1;
@@ -100,7 +100,7 @@ public class AddDates {
 			field = Calendar.MONTH;
 		}
 		
-		c1.add(n1, field);
+		c1.add(field, n1);
 		
 		return calendar_to_string(c1);
 		
@@ -199,7 +199,7 @@ public class AddDates {
 		}
 		
 		Calendar c1 = Calendar.getInstance();
-		c1.add(n, field);
+		c1.add(field, n);
 		
 		return calendar_to_string(c1);
 		

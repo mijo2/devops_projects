@@ -11,7 +11,12 @@ import java.util.Scanner;
 public class Menu {
 	private Hashtable d;
 	private int option;
-	private SimpleDateFormat format;
+	private static SimpleDateFormat format;
+	
+	static {
+		format = new SimpleDateFormat("dd/MM/yyyy");
+		format.setLenient(false);
+	}
 
 	public Hashtable getD() {
 		return d;
@@ -21,8 +26,6 @@ public class Menu {
 	
 	public Menu() {
 		d = new Hashtable();
-		format = new SimpleDateFormat("dd/MM/yyyy");
-		format.setLenient(false);
 		run_menu();
 	}
 	
@@ -147,10 +150,28 @@ public class Menu {
 	}
 	
 	public void _end_execution(String s, String type) {
+		boolean correct_format = _end_execution_bool(s, type);
+		if(correct_format) return;
+
+		if(type.contentEquals("date")) {
+			System.out.println("Incorrect date format!" + s);
+		}
+		else if(type.contentEquals("unit")) {
+			System.out.println("Incorrect input for option 2!");
+		}
+		else if(type.contentEquals("days")) {
+			System.out.println("Incorrect input for option 5!");
+		}
+		else {
+			System.out.println("Incorrect input! Please check the format");
+		}
+		System.exit(1);
+	}
+	
+	public static boolean _end_execution_bool(String s, String type) {
 		if(type.equals("date")) {
 			if(!_check_date_format(s)) {
-				sysout("Incorect Date input. Please adhere to the format!");
-				System.exit(1);
+				return false;
 			}
 		}
 		else if(type.equals("unit")) {
@@ -165,8 +186,7 @@ public class Menu {
 			}
 			
 			if(not_valid) {
-				sysout("Incorrect value for 'unit'. Please adhere to the options available!");
-				System.exit(1);
+				return false;
 			}
 		}
 		else if(type.contentEquals("days")) {
@@ -195,8 +215,7 @@ public class Menu {
 			}
 			
 			if(!is_type1 && !is_type2) {
-				sysout("Wrong input for option 5. Please adhere to the menu!");
-				System.exit(1);
+				return false;
 			}
 			
 		}
@@ -211,13 +230,14 @@ public class Menu {
 			}
 
 			if(not_valid) {
-				sysout("Input operation is incorrect. Please adhere to the options available!");
-				System.exit(1);
+				return false;
 			}
 		}
+
+		return true;
 	}
 	
-	private boolean _check_type2_equality(String form, String toCheck) {
+	private static boolean _check_type2_equality(String form, String toCheck) {
 		String[] forms = form.split(" ");
 		String[] toChecks = toCheck.split(" ");
 		
@@ -244,7 +264,7 @@ public class Menu {
 	  { return false; }
 	}
 
-	public boolean _check_date_format(String date) {
+	public static boolean _check_date_format(String date) {
 		boolean is_correct = true;
 		
 		try {

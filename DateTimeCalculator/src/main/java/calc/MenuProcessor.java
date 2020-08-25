@@ -88,6 +88,7 @@ public class MenuProcessor {
 		String answer = "-1";
 		try {
 			answer = AddDates.add_units(date.toString(), n.toString(), unit.toString());
+			System.out.println(answer);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
